@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Neon Crowd Runner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #050510;
+      --card: #12122A;
+      --cyan: #00F5FF;
+      --magenta: #FF00E5;
+      --yellow: #FFE600;
+      --text: #E8E8F0;
+      --muted: #8888AA;
+      --border: #2A2A5A;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    header {
+      text-align: center;
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .dots { display: flex; gap: 10px; justify-content: center; margin-bottom: 16px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--cyan), var(--magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { color: var(--muted); font-size: 13px; letter-spacing: 1px; margin-top: 8px; }
+    .container { max-width: 700px; margin: 0 auto; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 16px;
+      background: var(--cyan);
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--cyan);
+    }
+    p { color: #C0C0D8; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; padding: 0; }
+    ul li {
+      padding: 7px 0 7px 20px;
+      color: #C0C0D8;
+      border-bottom: 1px solid rgba(42,42,90,0.4);
+      position: relative;
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before { content: '›'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+    .contact-box {
+      background: rgba(0,245,255,0.05);
+      border: 1px solid rgba(0,245,255,0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .contact-box .label { font-size: 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .contact-box a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+    .contact-box .note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .faq-q { font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .faq-a { color: #C0C0D8; margin-bottom: 16px; font-size: 14px; }
+    .faq-a:last-child { margin-bottom: 0; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+    .links a {
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .links a:hover { border-color: var(--cyan); color: var(--cyan); }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="dots">
+      <div class="dot" style="background:#00F5FF;box-shadow:0 0 8px #00F5FF;"></div>
+      <div class="dot" style="background:#FF00E5;box-shadow:0 0 8px #FF00E5;"></div>
+      <div class="dot" style="background:#FFE600;box-shadow:0 0 8px #FFE600;"></div>
+    </div>
+    <h1>Support</h1>
+    <p class="subtitle">Neon Crowd Runner</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <div class="label">Email Support</div>
+        <a href="mailto:support@shayona.com">support@shayona.com</a>
+        <div class="note">We typically respond within 1–2 business days.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <p class="faq-q">My coins didn't appear after a purchase — what do I do?</p>
+      <p class="faq-a">First, close and reopen the app. If coins are still missing, go to the Shop → Offers tab and tap any pack — the app will attempt to restore your pending purchase. If the issue persists, email us with your Apple Order ID found in your purchase confirmation email.</p>
+
+      <p class="faq-q">Can I get a refund on a coin pack?</p>
+      <p class="faq-a">All refunds are handled by Apple. Visit <strong>reportaproblem.apple.com</strong> and sign in with your Apple ID to request a refund on any purchase.</p>
+
+      <p class="faq-q">I lost my progress / coins after reinstalling the app.</p>
+      <p class="faq-a">Progress and coins are stored locally on your device. Uninstalling the app will remove all local data. We recommend not uninstalling if you have coins you wish to keep. Unfortunately, we cannot restore locally lost data remotely.</p>
+
+      <p class="faq-q">The game crashes or has a bug — how do I report it?</p>
+      <p class="faq-a">Please email us at support@shayona.com with your device model (e.g. iPhone 15 Pro), iOS version, and a description of what happened. Screenshots or screen recordings are very helpful.</p>
+
+      <p class="faq-q">Is Neon Crowd Runner free to play?</p>
+      <p class="faq-a">Yes — the game is completely free. Coin packs are optional and only unlock cosmetic character skins. There are no ads and no pay-to-win mechanics.</p>
+
+      <p class="faq-q">What coin packs are available?</p>
+      <p class="faq-a">We offer 5 coin packs: 450 coins ($0.99), 1,000 coins ($1.99), 2,100 coins ($3.99), 5,000 coins ($8.99), and 10,000 coins ($18.99). All are one-time consumable purchases.</p>
+    </section>
+
+    <section>
+      <h2>Legal</h2>
+      <p>Read our full legal documents below.</p>
+      <div class="links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Shayona. All rights reserved.<br />
+    Neon Crowd Runner &mdash; com.shayona.neoncrowdrunner
+  </footer>
+</body>
+</html>
