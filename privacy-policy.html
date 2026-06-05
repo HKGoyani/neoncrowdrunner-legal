@@ -157,7 +157,7 @@
     </div>
     <h1>Privacy Policy</h1>
     <p class="subtitle">Neon Crowd Runner</p>
-    <span class="updated">Last updated: April 20, 2026</span>
+    <span class="updated">Last updated: June 5, 2026</span>
   </header>
 
   <div class="container">
@@ -173,6 +173,8 @@
         We do not collect your name, email, location, or any personally identifiable information.
         Game progress is stored locally on your device. The Game shows ads via Google AdMob,
         which may use a device identifier to personalise ads with your permission.
+        The Game also uses Firebase Analytics to collect anonymous gameplay data (such as
+        level completion and session length) to help us improve the experience.
       </div>
     </section>
 
@@ -268,12 +270,45 @@
     </section>
 
     <section>
+      <h2>Analytics — Firebase Analytics</h2>
+      <p>
+        Starting with version 1.0.6, Neon Crowd Runner uses <strong>Firebase Analytics</strong>
+        (provided by Google LLC) to collect anonymous, aggregated data about how the Game is used.
+        This helps us understand gameplay patterns and improve the experience.
+      </p>
+      <p>Firebase Analytics may collect the following data:</p>
+      <ul>
+        <li>App usage events (e.g. level started, level completed, game over)</li>
+        <li>Session length and frequency of use</li>
+        <li>Device model, OS version, and app version</li>
+        <li>Approximate country or region (derived from IP address — not stored)</li>
+        <li>In-app purchase events (product ID and value only — no payment details)</li>
+      </ul>
+      <p>
+        <strong>This data is anonymous and not linked to your identity.</strong>
+        Firebase Analytics does not collect your name, email, precise location, or any
+        personally identifiable information.
+      </p>
+      <p>
+        Analytics data is processed by Google and governed by
+        <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+        You can learn more about how Firebase uses data at:
+        <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a>.
+      </p>
+    </section>
+
+    <section>
       <h2>Third-Party Services</h2>
       <p>The Game integrates the following third-party services:</p>
       <ul>
         <li>
           <strong>Google AdMob</strong> — advertising network. May use device identifiers
           to serve and measure ads. Governed by
+          <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Firebase Analytics</strong> — anonymous app analytics by Google LLC.
+          Collects aggregated, non-identifiable usage data. Governed by
           <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
         </li>
         <li>
@@ -285,7 +320,6 @@
           Governed by Apple's Privacy Policy.
         </li>
       </ul>
-      <p>No analytics, crash reporting, or social login services are used.</p>
     </section>
 
     <section>
@@ -311,8 +345,8 @@
         (such as passcode, Face ID, or Touch ID). We have no access to this data.
       </p>
       <p>
-        Ad-related data transmitted to Google AdMob is encrypted in transit using
-        industry-standard TLS encryption.
+        Ad-related data transmitted to Google AdMob and analytics data transmitted to
+        Firebase Analytics are encrypted in transit using industry-standard TLS encryption.
       </p>
     </section>
 
