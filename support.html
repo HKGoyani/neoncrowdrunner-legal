@@ -97,10 +97,22 @@
       font-weight: 700;
     }
     .contact-box a:hover { text-decoration: underline; }
-    .contact-box .note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .contact-box .note { font-size: 12px; color: var(--muted); margin-top: 8px; margin-bottom: 0; }
     .faq-q { font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .faq-a { color: #C0C0D8; margin-bottom: 16px; font-size: 14px; }
+    .faq-a { color: #C0C0D8; margin-bottom: 20px; font-size: 14px; }
     .faq-a:last-child { margin-bottom: 0; }
+    .platform-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .tag-ios { background: rgba(0,245,255,0.12); color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); }
+    .tag-android { background: rgba(100,220,80,0.12); color: #64DC50; border: 1px solid rgba(100,220,80,0.3); }
     .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
     .links a {
       padding: 8px 16px;
@@ -140,7 +152,7 @@
       <div class="contact-box">
         <div class="label">Email Support</div>
         <a href="mailto:akashmangukiya10@gmail.com">akashmangukiya10@gmail.com</a>
-        <div class="note">We typically respond within 1–2 business days.</div>
+        <p class="note">We typically respond within 1–2 business days.</p>
       </div>
     </section>
 
@@ -148,22 +160,47 @@
       <h2>Frequently Asked Questions</h2>
 
       <p class="faq-q">My coins didn't appear after a purchase — what do I do?</p>
-      <p class="faq-a">First, close and reopen the app. If coins are still missing, go to the Shop → Offers tab and tap any pack — the app will attempt to restore your pending purchase. If the issue persists, email us with your Apple Order ID found in your purchase confirmation email.</p>
+      <p class="faq-a">First, close and reopen the app. If coins are still missing, go to the Shop → Offers tab and tap "Restore Purchases" at the bottom of the page. If the issue persists, email us with your order details:<br />
+        <span class="platform-tag tag-ios">iOS</span> Your Apple Order ID from your purchase confirmation email.<br />
+        <span class="platform-tag tag-android">Android</span> Your Google Play Order ID from your purchase confirmation email or Google Play → Account → Order History.
+      </p>
 
       <p class="faq-q">Can I get a refund on a coin pack?</p>
-      <p class="faq-a">All refunds are handled by Apple. Visit <strong>reportaproblem.apple.com</strong> and sign in with your Apple ID to request a refund on any purchase.</p>
+      <p class="faq-a">All refunds are handled by the platform store:<br />
+        <span class="platform-tag tag-ios">iOS</span> Visit <strong>reportaproblem.apple.com</strong> and sign in with your Apple ID.<br />
+        <span class="platform-tag tag-android">Android</span> Open Google Play → Account → Order History, find the purchase, and tap "Request a Refund". Alternatively visit <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" style="color:var(--cyan);">Google Play Refund Help</a>.
+      </p>
 
       <p class="faq-q">I lost my progress / coins after reinstalling the app.</p>
-      <p class="faq-a">Progress and coins are stored locally on your device. Uninstalling the app will remove all local data. We recommend not uninstalling if you have coins you wish to keep. Unfortunately, we cannot restore locally lost data remotely.</p>
+      <p class="faq-a">Progress and coins are stored locally on your device. Uninstalling the app will remove all local data. We recommend not uninstalling if you have coins you wish to keep. Unfortunately, we cannot restore locally lost data remotely.<br /><br />
+        Note: the Remove Ads purchase is tied to your store account and can always be restored via Shop → Offers → Restore Purchases.
+      </p>
 
       <p class="faq-q">The game crashes or has a bug — how do I report it?</p>
-      <p class="faq-a">Please email us at akashmangukiya10@gmail.com with your device model (e.g. iPhone 15 Pro), iOS version, and a description of what happened. Screenshots or screen recordings are very helpful.</p>
+      <p class="faq-a">Please email us at <strong>akashmangukiya10@gmail.com</strong> with:<br />
+        <span class="platform-tag tag-ios">iOS</span> Your device model (e.g. iPhone 15 Pro) and iOS version.<br />
+        <span class="platform-tag tag-android">Android</span> Your device model (e.g. Samsung Galaxy S24) and Android version.<br /><br />
+        Also include a description of what happened. Screenshots or screen recordings are very helpful.
+      </p>
 
       <p class="faq-q">Is Neon Crowd Runner free to play?</p>
-      <p class="faq-a">Yes — the game is completely free. Coin packs are optional and only unlock cosmetic character skins. There are no ads and no pay-to-win mechanics.</p>
+      <p class="faq-a">Yes — the game is completely free to download and play. It is supported by ads (banners, interstitials, and app open ads). You can remove all non-rewarded ads with a one-time "Remove Ads" purchase in the Shop → Offers tab. Rewarded ads are always optional and only shown when you choose to watch one to earn a bonus.</p>
 
-      <p class="faq-q">What coin packs are available?</p>
-      <p class="faq-a">We offer 5 coin packs: 450 coins ($0.99), 1,000 coins ($1.99), 2,100 coins ($3.99), 5,000 coins ($8.99), and 10,000 coins ($18.99). All are one-time consumable purchases.</p>
+      <p class="faq-q">What in-app purchases are available?</p>
+      <p class="faq-a">We offer the following optional purchases:
+        <br />• <strong>Remove Ads</strong> — permanent one-time purchase; removes banner, interstitial, and app open ads
+        <br />• <strong>Starter Pack</strong> — limited-time offer: 500 coins + 1 Shield Boost + 1 Doubler Boost
+        <br />• <strong>Coin packs</strong>: 500, 1,100, 2,300, 5,500, and 13,000 coins
+        <br /><br />Prices are shown in your local currency in the Shop. All purchases are processed by Apple (iOS) or Google (Android).
+      </p>
+
+      <p class="faq-q">How do I turn off notifications?</p>
+      <p class="faq-a">
+        <span class="platform-tag tag-ios">iOS</span> Go to Settings → Neon Crowd Runner → Notifications and toggle off.<br />
+        <span class="platform-tag tag-android">Android</span> Go to Settings → Apps → Neon Crowd Runner → Notifications and disable.
+        <br />You can also toggle notifications inside the game via the Settings screen.
+      </p>
+
     </section>
 
     <section>
@@ -178,7 +215,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Shayona. All rights reserved.<br />
+    &copy; 2026 Shayona. All rights reserved.<br />
     Neon Crowd Runner &mdash; com.shayona.neoncrowdrunner
   </footer>
 </body>

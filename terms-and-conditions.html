@@ -115,6 +115,18 @@
       color: var(--magenta);
       font-size: 13px;
     }
+    .platform-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tag-ios { background: rgba(0,245,255,0.12); color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); }
+    .tag-android { background: rgba(100,220,80,0.12); color: #64DC50; border: 1px solid rgba(100,220,80,0.3); }
     .contact-box {
       background: rgba(255,230,0,0.05);
       border: 1px solid rgba(255,230,0,0.2);
@@ -127,6 +139,8 @@
       font-weight: 600;
     }
     .contact-box a:hover { text-decoration: underline; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
       text-align: center;
       color: var(--muted);
@@ -146,7 +160,7 @@
     </div>
     <h1>Terms &amp; Conditions</h1>
     <p class="subtitle">Neon Crowd Runner</p>
-    <span class="updated">Last updated: April 8, 2025</span>
+    <span class="updated">Last updated: June 17, 2026</span>
   </header>
 
   <div class="container">
@@ -155,8 +169,9 @@
       <h2>Agreement to Terms</h2>
       <p>
         By downloading, installing, or playing Neon Crowd Runner ("the Game"), you agree
-        to be bound by these Terms and Conditions. If you do not agree with any part
-        of these terms, please do not use the Game.
+        to be bound by these Terms and Conditions. These Terms apply to all platforms on
+        which the Game is available, including iOS (Apple App Store) and Android (Google Play Store).
+        If you do not agree with any part of these terms, please do not use the Game.
       </p>
       <div class="highlight">
         These Terms constitute a legal agreement between you and Shayona,
@@ -184,21 +199,53 @@
     <section>
       <h2>In-App Purchases</h2>
       <p>
-        The Game offers optional in-app purchases ("Coin Packs") that provide
-        virtual in-game currency (Coins). All purchases are processed by Apple
-        through the App Store.
+        The Game offers optional in-app purchases including coin packs, a Starter Pack,
+        and a Remove Ads upgrade. All purchases are processed by the platform's official store:
       </p>
       <ul>
-        <li>All Coin Pack purchases are <strong>consumable</strong> — coins are spent within the game</li>
+        <li>
+          <span class="platform-tag tag-ios">iOS</span>
+          Purchases are processed by <strong>Apple</strong> through the App Store
+        </li>
+        <li>
+          <span class="platform-tag tag-android">Android</span>
+          Purchases are processed by <strong>Google</strong> through Google Play
+        </li>
+      </ul>
+      <ul>
+        <li>Coin pack purchases are <strong>consumable</strong> — coins are spent within the game</li>
+        <li>Remove Ads is a <strong>non-consumable</strong> one-time purchase, permanently linked to your store account</li>
         <li>Prices are displayed in your local currency at the time of purchase</li>
         <li>Purchases are final and non-refundable except as required by applicable law</li>
         <li>Virtual coins have no real-world monetary value and cannot be exchanged for cash</li>
         <li>Coins are stored on your device and may be lost if you uninstall the Game</li>
       </ul>
+      <p>For refund requests:</p>
+      <ul>
+        <li>
+          <span class="platform-tag tag-ios">iOS</span>
+          Contact Apple Support at <strong>reportaproblem.apple.com</strong>
+        </li>
+        <li>
+          <span class="platform-tag tag-android">Android</span>
+          Request a refund via <strong>Google Play</strong> → Account → Order History, or visit <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play Refund Help</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Advertising</h2>
       <p>
-        For refund requests, please contact Apple Support directly, as all billing
-        is managed through the App Store.
+        The Game is free to play and supported by advertising through Google AdMob.
+        Ads may be shown in the following formats: banner ads, interstitial ads,
+        app open ads, and optional rewarded ads (which you choose to watch in exchange
+        for in-game rewards).
       </p>
+      <ul>
+        <li>Rewarded ads are always optional — you are never forced to watch them</li>
+        <li>Purchasing the Remove Ads upgrade removes banner, interstitial, and app open ads</li>
+        <li>Rewarded ads remain available after purchasing Remove Ads, as they are opt-in only</li>
+      </ul>
     </section>
 
     <section>
@@ -225,9 +272,12 @@
       </p>
       <p>
         Parents and guardians are responsible for monitoring in-app purchase activity
-        by minors. We recommend using Screen Time or Parental Controls on your device
-        to restrict purchases.
+        by minors. We recommend using the following parental controls to restrict purchases:
       </p>
+      <ul>
+        <li><span class="platform-tag tag-ios">iOS</span> Screen Time → Content &amp; Privacy Restrictions → iTunes &amp; App Store Purchases</li>
+        <li><span class="platform-tag tag-android">Android</span> Google Play → Settings → Parental Controls, or Google Family Link</li>
+      </ul>
     </section>
 
     <section>
@@ -322,14 +372,15 @@
         <strong>Shayona</strong><br />
         Email: <a href="mailto:akashmangukiya10@gmail.com">akashmangukiya10@gmail.com</a><br />
         App: Neon Crowd Runner<br />
-        Bundle ID: com.shayona.neoncrowdrunner
+        App ID (iOS): com.shayona.neoncrowdrunner<br />
+        Package (Android): com.shayona.neoncrowdrunner
       </div>
     </section>
 
   </div>
 
   <footer>
-    &copy; 2025 Shayona. All rights reserved.<br />
+    &copy; 2026 Shayona. All rights reserved.<br />
     Neon Crowd Runner &mdash; com.shayona.neoncrowdrunner
   </footer>
 </body>

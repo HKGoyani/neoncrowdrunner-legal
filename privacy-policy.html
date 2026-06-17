@@ -91,6 +91,14 @@
       border-radius: 2px;
       box-shadow: 0 0 8px var(--cyan);
     }
+    h3 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--magenta);
+      margin: 20px 0 10px;
+    }
     p { color: #C0C0D8; margin-bottom: 12px; }
     p:last-child { margin-bottom: 0; }
     ul { list-style: none; padding: 0; margin-bottom: 12px; }
@@ -124,6 +132,18 @@
       color: #FF9A3C;
       font-size: 13px;
     }
+    .platform-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tag-ios { background: rgba(0,245,255,0.12); color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); }
+    .tag-android { background: rgba(100,220,80,0.12); color: #64DC50; border: 1px solid rgba(100,220,80,0.3); }
     .contact-box {
       background: rgba(255,230,0,0.05);
       border: 1px solid rgba(255,230,0,0.2);
@@ -157,7 +177,7 @@
     </div>
     <h1>Privacy Policy</h1>
     <p class="subtitle">Neon Crowd Runner</p>
-    <span class="updated">Last updated: June 5, 2026</span>
+    <span class="updated">Last updated: June 17, 2026</span>
   </header>
 
   <div class="container">
@@ -166,15 +186,16 @@
       <h2>Overview</h2>
       <p>
         Neon Crowd Runner ("the Game", "we", "our") is developed and published by Shayona.
-        This Privacy Policy explains what information we collect, how we use it,
-        and your rights regarding your data.
+        This Privacy Policy applies to all platforms on which the Game is available,
+        including iOS (Apple App Store) and Android (Google Play Store).
+        It explains what information we collect, how we use it, and your rights regarding your data.
       </p>
       <div class="highlight">
         We do not collect your name, email, location, or any personally identifiable information.
         Game progress is stored locally on your device. The Game shows ads via Google AdMob,
-        which may use a device identifier to personalise ads with your permission.
-        The Game also uses Firebase Analytics to collect anonymous gameplay data (such as
-        level completion and session length) to help us improve the experience.
+        which may use a device advertising identifier to personalise ads. The Game also uses
+        Firebase Analytics to collect anonymous gameplay data (such as level completion and
+        session length) to help us improve the experience.
       </div>
     </section>
 
@@ -196,7 +217,7 @@
       <h2>Data Stored on Your Device</h2>
       <p>
         The Game saves the following data <strong>locally on your device only</strong>
-        using Apple's standard storage (UserDefaults / SharedPreferences).
+        using the device's standard local storage (UserDefaults on iOS, SharedPreferences on Android).
         This data never leaves your device:
       </p>
       <ul>
@@ -207,42 +228,58 @@
         <li>Daily reward and streak information</li>
       </ul>
       <p>
-        This data is managed by iOS and may be included in your iCloud backup
-        if you have iCloud Backup enabled. You can delete all data by uninstalling the app.
+        <span class="platform-tag tag-ios">iOS</span>
+        This data is managed by iOS and may be included in your iCloud Backup if you have
+        iCloud Backup enabled in Settings.
       </p>
+      <p>
+        <span class="platform-tag tag-android">Android</span>
+        This data is stored in the app's private storage. It is automatically removed
+        when you uninstall the app.
+      </p>
+      <p>You can delete all locally stored data by uninstalling the app.</p>
     </section>
 
     <section>
       <h2>Advertising — Google AdMob</h2>
       <p>
         Neon Crowd Runner is free to play and is supported by advertising.
-        We use <strong>Google AdMob</strong> (provided by Google LLC) to display ads within the Game.
-        AdMob may collect and use your device's advertising identifier (IDFA on iOS) to show
-        you relevant ads and measure ad performance.
+        We use <strong>Google AdMob</strong> (provided by Google LLC) to display ads within the Game,
+        including banner ads, interstitial ads, app open ads, and optional rewarded ads.
       </p>
+      <p>AdMob may collect and use your device's advertising identifier to serve relevant ads and measure performance:</p>
+      <ul>
+        <li><span class="platform-tag tag-ios">iOS</span> IDFA (Identifier for Advertisers) — only if you grant App Tracking Transparency permission</li>
+        <li><span class="platform-tag tag-android">Android</span> Google Advertising ID (GAID) — used to show personalised ads; can be reset or opted out in device settings</li>
+        <li>IP address (used to infer general location for ad targeting — not stored)</li>
+        <li>Ad interaction data (impressions, clicks, view duration)</li>
+      </ul>
 
-      <h2 style="margin-top:20px;">App Tracking Transparency (iOS 14.5+)</h2>
+      <h3>iOS — App Tracking Transparency (iOS 14.5+)</h3>
       <p>
         On iOS 14.5 and later, the Game will ask for your permission via Apple's
-        <strong>App Tracking Transparency</strong> prompt before your device's advertising
-        identifier is used for personalised ads. You may choose to allow or decline tracking:
+        <strong>App Tracking Transparency</strong> prompt before your IDFA is used for personalised ads.
       </p>
       <ul>
-        <li><strong>Allow:</strong> AdMob may use your IDFA to show personalised ads relevant to you</li>
-        <li><strong>Ask App Not to Track:</strong> AdMob will show non-personalised ads only; your IDFA is not used for tracking</li>
+        <li><strong>Allow:</strong> AdMob may use your IDFA to show personalised ads</li>
+        <li><strong>Ask App Not to Track:</strong> AdMob will show non-personalised ads only; your IDFA is not used</li>
       </ul>
       <div class="highlight-orange">
         You can change your tracking preference at any time in <strong>iOS Settings → Privacy &amp; Security → Tracking</strong>.
       </div>
 
-      <p style="margin-top:12px;">AdMob may collect the following data for advertising purposes:</p>
-      <ul>
-        <li>Device advertising identifier (IDFA) — only if you grant tracking permission</li>
-        <li>IP address (used to infer general location for ad targeting)</li>
-        <li>Ad interaction data (impressions, clicks, view duration)</li>
-      </ul>
+      <h3>Android — Advertising ID</h3>
       <p>
-        This data is processed by Google and governed by Google's Privacy Policy:<br />
+        On Android, AdMob uses the Google Advertising ID (GAID) to serve personalised ads.
+        You can opt out of personalised ads or reset your Advertising ID at any time:
+      </p>
+      <div class="highlight-orange">
+        Go to <strong>Settings → Google → Ads</strong> (or <strong>Settings → Privacy → Ads</strong> on some devices)
+        to opt out of ads personalisation or reset your Advertising ID.
+      </div>
+
+      <p style="margin-top:12px;">
+        Ad data is processed by Google and governed by Google's Privacy Policy:<br />
         <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
       </p>
       <p>
@@ -254,27 +291,25 @@
     <section>
       <h2>In-App Purchases</h2>
       <p>
-        Neon Crowd Runner offers optional in-app purchases (coin packs).
-        All payments are processed exclusively by Apple through the App Store.
-        We never see, handle, or store your payment information.
-      </p>
-      <p>
-        Apple's privacy practices for payment processing are governed by
-        Apple's Privacy Policy at <strong>apple.com/privacy</strong>.
+        Neon Crowd Runner offers optional in-app purchases (coin packs, Remove Ads, and the Starter Pack).
+        All payments are processed by the platform's official store. We never see, handle, or store
+        your payment information.
       </p>
       <ul>
-        <li>Purchases are consumable (coin packs, used within the game)</li>
-        <li>Payment data is handled entirely by Apple</li>
-        <li>We only receive confirmation that a purchase was completed</li>
+        <li><span class="platform-tag tag-ios">iOS</span> Purchases are processed by <strong>Apple</strong> through the App Store. Governed by <a href="https://www.apple.com/privacy/" target="_blank">Apple's Privacy Policy</a>.</li>
+        <li><span class="platform-tag tag-android">Android</span> Purchases are processed by <strong>Google</strong> through Google Play. Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+        <li>We only receive confirmation that a purchase was completed — no payment details</li>
+        <li>Consumable purchases (coin packs) are used within the game</li>
+        <li>Non-consumable purchases (Remove Ads) are permanent and linked to your store account</li>
       </ul>
     </section>
 
     <section>
       <h2>Analytics — Firebase Analytics</h2>
       <p>
-        Starting with version 1.0.6, Neon Crowd Runner uses <strong>Firebase Analytics</strong>
-        (provided by Google LLC) to collect anonymous, aggregated data about how the Game is used.
-        This helps us understand gameplay patterns and improve the experience.
+        Neon Crowd Runner uses <strong>Firebase Analytics</strong> (provided by Google LLC) to collect
+        anonymous, aggregated data about how the Game is used. This helps us understand gameplay
+        patterns and improve the experience.
       </p>
       <p>Firebase Analytics may collect the following data:</p>
       <ul>
@@ -302,8 +337,8 @@
       <p>The Game integrates the following third-party services:</p>
       <ul>
         <li>
-          <strong>Google AdMob</strong> — advertising network. May use device identifiers
-          to serve and measure ads. Governed by
+          <strong>Google AdMob</strong> — advertising network. May use device advertising identifiers
+          (IDFA on iOS, GAID on Android) to serve and measure ads. Governed by
           <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
         </li>
         <li>
@@ -312,12 +347,20 @@
           <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
         </li>
         <li>
-          <strong>Apple StoreKit</strong> — in-app purchase processing.
+          <strong>Apple StoreKit</strong> <span class="platform-tag tag-ios">iOS</span> — in-app purchase processing.
           Governed by <a href="https://www.apple.com/privacy/" target="_blank">Apple's Privacy Policy</a>.
         </li>
         <li>
-          <strong>Apple App Store</strong> — app distribution and review collection.
+          <strong>Google Play Billing</strong> <span class="platform-tag tag-android">Android</span> — in-app purchase processing.
+          Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Apple App Store</strong> <span class="platform-tag tag-ios">iOS</span> — app distribution.
           Governed by Apple's Privacy Policy.
+        </li>
+        <li>
+          <strong>Google Play Store</strong> <span class="platform-tag tag-android">Android</span> — app distribution.
+          Governed by Google's Privacy Policy.
         </li>
       </ul>
     </section>
@@ -331,9 +374,17 @@
       </p>
       <p>
         Google AdMob is configured to treat all ad requests as coming from a general audience.
+      </p>
+      <p>
+        <span class="platform-tag tag-ios">iOS</span>
         Personalised advertising based on tracking is only enabled with the user's explicit
         consent via the iOS App Tracking Transparency prompt. If consent is not granted,
         only non-personalised ads are shown.
+      </p>
+      <p>
+        <span class="platform-tag tag-android">Android</span>
+        Users can opt out of personalised ads at any time via Android device settings
+        (Settings → Google → Ads).
       </p>
     </section>
 
@@ -342,7 +393,7 @@
       <p>
         All game progress data is stored locally on your device and its security is
         managed by your device's operating system and your personal device security settings
-        (such as passcode, Face ID, or Touch ID). We have no access to this data.
+        (such as passcode, Face ID, fingerprint, or PIN). We have no access to this data.
       </p>
       <p>
         Ad-related data transmitted to Google AdMob and analytics data transmitted to
@@ -354,10 +405,24 @@
       <h2>Your Rights</h2>
       <p>You have the following controls over data related to this Game:</p>
       <ul>
-        <li><strong>Tracking permission:</strong> Change at any time in iOS Settings → Privacy &amp; Security → Tracking → Neon Crowd Runner</li>
-        <li><strong>Ad personalisation:</strong> Opt out at <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
+        <li>
+          <span class="platform-tag tag-ios">iOS</span>
+          <strong>Tracking permission:</strong> Change at any time in iOS Settings → Privacy &amp; Security → Tracking → Neon Crowd Runner
+        </li>
+        <li>
+          <span class="platform-tag tag-android">Android</span>
+          <strong>Ad personalisation:</strong> Opt out or reset Advertising ID in Settings → Google → Ads
+        </li>
+        <li><strong>Ad personalisation (all platforms):</strong> Opt out at <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
         <li><strong>Game data:</strong> Delete all local data by uninstalling the app</li>
-        <li><strong>IDFA reset:</strong> Reset your advertising identifier in iOS Settings → Privacy &amp; Security → Tracking</li>
+        <li>
+          <span class="platform-tag tag-ios">iOS</span>
+          <strong>IDFA reset:</strong> Reset your advertising identifier in iOS Settings → Privacy &amp; Security → Tracking
+        </li>
+        <li>
+          <span class="platform-tag tag-android">Android</span>
+          <strong>GAID reset:</strong> Reset your Google Advertising ID in Settings → Google → Ads → Reset advertising ID
+        </li>
       </ul>
     </section>
 
@@ -378,7 +443,8 @@
         <strong>Shayona</strong><br />
         Email: <a href="mailto:akashmangukiya10@gmail.com">akashmangukiya10@gmail.com</a><br />
         App: Neon Crowd Runner<br />
-        Bundle ID: com.shayona.neoncrowdrunner
+        App ID (iOS): com.shayona.neoncrowdrunner<br />
+        Package (Android): com.shayona.neoncrowdrunner
       </div>
     </section>
 
